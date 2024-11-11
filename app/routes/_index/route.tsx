@@ -5,6 +5,9 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
+import { Page, Toolbar, ToolbarButton, Icon, Button } from 'react-onsenui';
+import 'onsenui/css/onsenui.css';
+import 'onsenui/css/onsen-css-components.css';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -13,6 +16,24 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
+            <div>
+                <Toolbar>
+                    <div className="left">
+                        <ToolbarButton onClick={() => alert('Parent Page')}>
+                            <Icon icon="fa-arrow-left" />
+                        </ToolbarButton>
+                        <span style={{ marginLeft: 8 }}>Parent Page</span>
+                    </div>
+                    <div className="center">
+                        <strong>Page Title</strong>
+                    </div>
+                    <div className="right">
+                        <Button modifier="quiet" onClick={() => alert('Edit')}>
+                            Edit
+                        </Button>
+                    </div>
+                </Toolbar>
+            </div>
             <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
             <span>
                 Double click to edit App component

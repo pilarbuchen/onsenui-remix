@@ -11,6 +11,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+        "onsenui": "^2.10.10",
+    "react-onsenui": "^1.11.6",
     "@netlify/remix-adapter": "^2.5.1",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
