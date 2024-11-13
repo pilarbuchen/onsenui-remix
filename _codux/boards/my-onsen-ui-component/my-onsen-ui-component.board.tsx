@@ -4,4 +4,8 @@ import MyOnsenUIComponent from '../../../src/components/my-onsen-ui-component/my
 export default createBoard({
     name: 'MyOnsenUIComponent',
     Board: () => <MyOnsenUIComponent />,
+    environmentProps: {
+        windowWidth: 1024,
+        windowHeight: 768,
+    },
 });

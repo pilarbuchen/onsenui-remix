@@ -6,7 +6,6 @@ import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
 import { Page, Toolbar, ToolbarButton, Icon, Button } from 'react-onsenui';
-import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
@@ -15,7 +14,7 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 
 export default function HomePage() {
     return (
-        <div className={styles.root}>
+        <div>
             <div>
                 <Toolbar>
                     <div className="left">
@@ -34,17 +33,19 @@ export default function HomePage() {
                     </div>
                 </Toolbar>
             </div>
-            <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
-            <span>
-                Double click to edit App component
-                <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p className={styles.paragraph}>
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.{' '}
-            </p>
+            <div className={styles.root}>
+                <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
+                <span>
+                    Double click to edit App component
+                    <br />
+                    &amp; drag here elements from + Add <b>Elements</b> Panel
+                </span>
+                <p className={styles.paragraph}>
+                    This project is using <img src={ViteSvg} width="12" />+
+                    <img src={TypescriptSvg} width="12" />
+                    Visit vitejs.dev to learn more.{' '}
+                </p>
+            </div>
         </div>
     );
 }
